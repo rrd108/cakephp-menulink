@@ -32,8 +32,8 @@ class MenuLinkHelper extends HtmlHelper
      */
     public function menuLink($title, $url = null, array $options = [])
     {
-        if (strtolower($this->request->getParam('controller')) == $url['controller']
-            && $this->request->getParam('action') == $url['action']
+        if (strtolower($this->request->getParam('controller')) == strtolower($url['controller'])
+            && strtolower($this->request->getParam('action')) == strtolower($url['action'])
         ) {
                 $options['class'] = 'active';
         }
