@@ -1,4 +1,4 @@
-# MenuLink plugin for CakePHP
+# MenuLink plugin for CakePHP 3
 
 This is a handy and really simple plugin for displaying the active menu item based on the url. If you have a link pointing to the current url, it will get an "active" css class. You should add your own css definitin for `a.active` to your css file.
 
