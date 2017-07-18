@@ -2,6 +2,7 @@
     "name": "rrd108/cakephp-menulink",
     "description": "MenuLink plugin for CakePHP",
     "type": "cakephp-plugin",
+    "license": "MIT",
     "require": {
         "cakephp/cakephp": "^3.0"
     },
