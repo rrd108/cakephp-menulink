@@ -19,7 +19,7 @@ composer require rrd108/cakephp-menulink
 Load the plugin in your `/config/bootstrap.php` file
 
 ```php
-Plugin::load('menuLink');
+Plugin::load('MenuLink');
 ```
 
 ### Load and use the helper
@@ -31,7 +31,7 @@ You can load the helper in two different ways, the reccomended way or the overri
 In your `/src/View/AppView.php` file at your `initialize()` method load the helper like this.
 
 ```php
-$this->loadHelper('menuLink.menuLink');
+$this->loadHelper('MenuLink.MenuLink');
 ```
 
 In this case in your view files you should use the helper like this.
@@ -52,7 +52,7 @@ The menuLink call handles the same paramaeters as the core Html helper's [link m
 
 This is a little bit more comfortable way to do the same above. As this way overrides the core Html helper it can conflict with other helpers trying to override the same thing.
 
-In your `View/AppView.php` file load the helper like this.
+In your `/src/View/AppView.php` file at your `initialize()` method load the helper like this.
 
 ```php
 $this->loadHelper('Html', ['className' => 'MenuLink.MenuLink']);
