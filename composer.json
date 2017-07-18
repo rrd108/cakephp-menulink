@@ -1,0 +1,22 @@
+{
+    "name": "rrd108/cakephp-MenuLink",
+    "description": "MenuLink plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "cakephp/cakephp": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MenuLink\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MenuLink\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
