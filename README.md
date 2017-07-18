@@ -28,7 +28,7 @@ You can load the helper in two different ways, the reccomended way or the overri
 
 #### Reccomended way
 
-In your `View/AppView.php` file load the helper like this.
+In your `/src/View/AppView.php` file at your `initialize()` method load the helper like this.
 
 ```php
 $this->loadHelper('menuLink.menuLink');
