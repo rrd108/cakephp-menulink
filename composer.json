@@ -1,5 +1,5 @@
 {
-    "name": "rrd108/cakephp-MenuLink",
+    "name": "rrd108/cakephp-menulink",
     "description": "MenuLink plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
