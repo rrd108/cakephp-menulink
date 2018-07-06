@@ -26,7 +26,7 @@ Plugin::load('MenuLink');
 
 You can load the helper in two different ways, the reccomended way or the override way.
 
-#### Reccomended way
+#### Recommended way
 
 In your `/src/View/AppView.php` file at your `initialize()` method load the helper like this.
 
