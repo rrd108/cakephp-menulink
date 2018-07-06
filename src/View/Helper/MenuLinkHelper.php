@@ -1,7 +1,7 @@
 <?php
 /**
  * CakePHP MenuLinkHelper
- * 
+ *
  * @author    rrd <rrd@webmania.cc>
  * @copyright 2017 Radharadhya dasa
  * @license   https://opensource.org/licenses/mit-license.php MIT License
@@ -32,7 +32,8 @@ class MenuLinkHelper extends HtmlHelper
      */
     public function menuLink($title, $url = null, array $options = [])
     {
-        if (strtolower($this->request->getParam('controller')) == strtolower($url['controller'])
+        if (isset($url['controller'])
+            && strtolower($this->request->getParam('controller')) == strtolower($url['controller'])
             && strtolower($this->request->getParam('action')) == strtolower($url['action'])
         ) {
                 $options['class'] = 'active';
