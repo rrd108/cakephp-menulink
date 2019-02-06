@@ -35,9 +35,16 @@ class MenuLinkHelper extends HtmlHelper
         if (!empty($url['controller'])
             && strtolower($this->request->getParam('controller')) == strtolower($url['controller'])
             && !empty($url['action'])
-            && strtolower($this->request->getParam('action')) == strtolower($url['action'])
+            && (
+                strtolower($this->request->getParam('action')) == strtolower($url['action'])
+                || (
+                    strtolower($url['controller']) == 'pages'
+                    && strtolower($this->request->getParam('action')) == 'display'
+                    && strtolower($this->request->getParam('pass')[0]) == strtolower($url['action'])
+                )
+            )
         ) {
-                $options['class'] = 'active';
+            $options['class'] = 'active';
         }
         return parent::link($title, $url, $options);
     }
