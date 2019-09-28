@@ -3,7 +3,7 @@
  * CakePHP MenuLinkHelper
  *
  * @author    rrd <rrd@webmania.cc>
- * @copyright 2017 Radharadhya dasa
+ * @copyright 2017-2019 Radharadhya dasa
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
 namespace MenuLink\View\Helper;
@@ -33,14 +33,14 @@ class MenuLinkHelper extends HtmlHelper
     public function menuLink($title, $url = null, array $options = [])
     {
         if (!empty($url['controller'])
-            && strtolower($this->request->getParam('controller')) == strtolower($url['controller'])
+            && strtolower($this->getView()->getRequest()->getParam('controller')) == strtolower($url['controller'])
             && !empty($url['action'])
             && (
-                strtolower($this->request->getParam('action')) == strtolower($url['action'])
+                strtolower($this->getView()->getRequest()->getParam('action')) == strtolower($url['action'])
                 || (
                     strtolower($url['controller']) == 'pages'
-                    && strtolower($this->request->getParam('action')) == 'display'
-                    && strtolower($this->request->getParam('pass')[0]) == strtolower($url['action'])
+                    && strtolower($this->getView()->getRequest()->getParam('action')) == 'display'
+                    && strtolower($this->getView()->getRequest()->getParam('pass')[0]) == strtolower($url['action'])
                 )
             )
         ) {
